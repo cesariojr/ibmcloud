@@ -1,0 +1,32 @@
+<p class="txt-large">
+  Player One - {{ playerOne.name }}
+</p>
+<div>
+  <span>Weapon:</span>
+  {{ playerOne.weapon }}
+</div>
+<div>
+  <span>Flashlight:</span>
+  {{ playerOne.flashlight }}
+</div>
+<div>
+  <span>Map:</span>
+  {{ playerOne.map }}
+</div>
+
+<h2 id="description">
+  Texto Inicial!
+</h2>
+
+<p>
+  <a class="btn-download" href="#" (click)="start()">
+    <strong>Começar!</strong>
+  </a>&nbsp;
+  <a class="btn-download-alt" href="#">
+    <strong>Começar!</strong>
+  </a>
+</p>
+
+<li *ngFor="let room of rooms" (click)="start()">
+  <span class="badge">{{room.id}}</span> {{room.description}}
+</li>
