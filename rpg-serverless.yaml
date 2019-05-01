@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ labels:
+   app: rpg-serverless
+ name: rpg-serverless
+ namespace: default
+spec:
+ selector:
+   matchLabels:
+     app: rpg-serverless
+ replicas: 1
+ template:
+   metadata:
+     labels:
+       app: rpg-serverless
+   spec:
+     containers:
+     - image: registry.ng.bluemix.net/dns_namespace/rpg-serverless:latest
+       name: rpg-serverless
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: rpg-serverless-nodeport
+ labels:
+   app: rpg-serverless
+spec:
+ selector:
+   app: rpg-serverless
+ type: NodePort
+ ports:
+  - port: 80
+    nodePort: 30872
