@@ -3,7 +3,7 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /usr/share/nginx/html
-COPY dist/rpg-serverless/ /usr/share/nginx/html
+COPY /dist/rpg-serverless/ /usr/share/nginx/html
 
 #FROM node:10.15.2-alpine AS builder
 #COPY . ./rpg-serverless
