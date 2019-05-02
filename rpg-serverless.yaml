@@ -16,7 +16,7 @@ spec:
        app: rpg-serverless
    spec:
      containers:
-     - image: registry.ng.bluemix.net/dns_namespace/rpg-serverless:latest
+     - image: us.icr.io/dns_namespace/rpg-serverless:latest
        name: rpg-serverless
 ---
 apiVersion: v1
