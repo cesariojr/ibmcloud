@@ -23,11 +23,12 @@ export class MainscreenComponent implements OnInit {
   constructor(private messageService: MessageService) { }
 
   ngOnInit() {
-    this.getRooms();
+
   }
 
   start() {
     this.playerOne.name = "Danilo";
+    this.getRooms();
   }
 
   getRooms(): void {
