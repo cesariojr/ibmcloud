@@ -3,7 +3,7 @@
 </p>
 
 <h2 id="description">
-  Me altere!
+  Me altere!!
 </h2>
 
 <p>
@@ -12,6 +12,7 @@
   </a>
 </p>
 
-<!-- <li *ngFor="let room of rooms" (click)="start()"> -->
-<span class="badge">{{room.id}}</span> {{room.description}}
-<!-- </li> -->
+<div *ngIf="room.id">
+  <h1>{{room.description}}</h1>
+  <h2>id: {{room.id}}</h2>
+</div>
