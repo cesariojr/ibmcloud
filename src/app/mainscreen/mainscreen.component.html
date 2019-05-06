@@ -7,11 +7,11 @@
 </h2>
 
 <p>
-  <a class="btn-download" href="#" (click)="start()">
+  <a class="btn-download" href="#" (click)="start(1)">
     <strong>Carregar dados do Cloudant via IBM Functions!</strong>
   </a>
 </p>
 
-<li *ngFor="let room of rooms" (click)="start()">
-  <span class="badge">{{room.id}}</span> {{room.description}}
-</li>
+<!-- <li *ngFor="let room of rooms" (click)="start()"> -->
+<span class="badge">{{room.id}}</span> {{room.description}}
+<!-- </li> -->

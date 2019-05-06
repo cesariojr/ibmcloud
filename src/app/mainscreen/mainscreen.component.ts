@@ -26,13 +26,13 @@ export class MainscreenComponent implements OnInit {
 
   }
 
-  start() {
-    this.playerOne.name = "Danilo";
-    this.getRooms();
+  start(parametro: number) {
+    // this.playerOne.name = "Danilo";
+    this.getRooms(parametro);
   }
 
-  getRooms(): void {
-    this.messageService.getRooms()
+  getRooms(parametro: number): void {
+    this.messageService.getRooms(parametro)
       .subscribe(rooms => {
         this.rooms = rooms['response'];
         console.log(this.rooms);

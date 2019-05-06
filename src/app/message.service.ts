@@ -13,9 +13,9 @@ export class MessageService {
 
   constructor(private http: HttpClient) { }
 
-  getRooms(): Observable<Room[]> {
+  getRooms(parametro: number): Observable<Room[]> {
     //return of(ROOMS);
-    return this.http.get<Room[]>("https://us-south.functions.cloud.ibm.com/api/v1/web/dnovais%40br.ibm.com_dev-Danilo/ibm.cloud.rpg/serverless-rpg-test.json")
+    return this.http.get<Room[]>("https://us-south.functions.cloud.ibm.com/api/v1/web/dnovais%40br.ibm.com_dev-Danilo/ibm.cloud.rpg/read-next-romm.json")
       .pipe(
         tap(_ => console.log('fetched heroes'))
       );
