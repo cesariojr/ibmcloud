@@ -14,7 +14,7 @@ export class MessageService {
 
   getRooms(parametro: number): Observable<Room> {
     var url: string;
-    url = "https://us-south.functions.cloud.ibm.com/api/v1/web/dnovais%40br.ibm.com_dev-Danilo/ibm.cloud.qcon/read-from-cloudant.json?id=" + parametro;
+    url = "https://us-south.functions.cloud.ibm.com/api/v1/web/dnovais%40br.ibm.com_dev-Danilo/ibm-cloud/read-from-cloudant-cloud-explorer.json?id=" + parametro;
     console.log("url", url);
     return this.http.get<Room>(url)
       .pipe(
