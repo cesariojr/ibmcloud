@@ -45,3 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 apiKey-pipeline-k8s.json
+package-lock.json
+video_devops.mp4
